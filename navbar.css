@@ -1,0 +1,82 @@
+/* Reset some default styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+} 
+
+/* Navbar styling */
+.navbar {
+    background-color: transparent;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(194, 17, 17);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.box{
+    border: #fff;
+    height: 370px;
+    width: 340px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    color: rgb(116, 4, 4);
+    background: #fff;
+    box-shadow: 0px 2px 4px rgb(236, 103, 103);     
+}
+
+hr{
+    width: 150px;
+}
+
+input{
+    border: none;
+    background-color: rgb(236, 103, 103);
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 4px 0 4px 0;
+    box-shadow: 0px 2px 5px red;
+}

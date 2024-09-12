@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <form action="">
+        <label for="tempat">Nama Depan</label><br>
+        <input type="radio" onclick="namaDepan()"><br>
+        <label for="wilayah">Nama Belakang</label><br>
+        <input type="radio" onclick="namaBelakang()"><br>
+        <button onclick="clearDisplay()">C</button>
+
+        <div id="ubah"></div>
+    </form>
+
+    <script>
+        function clearDisplay(e) {
+            document.getElementById("ubah").innerHTML = "";
+        }
+
+        function namaDepan(e) {
+            document.getElementById("ubah").innerHTML = 'abil';  
+             
+        }
+
+        function namaBelakang(e) {
+            document.getElementById("ubah").innerHTML = 'waqiro';
+        }
+    </script>
+</body>
+</html>

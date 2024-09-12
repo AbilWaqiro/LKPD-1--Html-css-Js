@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 2px black;
+            border-radius: 4px 0 4px 0;
+            width: 25%;
+            padding: 2%;
+            margin-left: 35%;
+        }
+        .text {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        #time {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        button{
+            border: none;
+            background-color: rgb(75, 74, 74);
+            color: white;
+            padding: 8px;
+            width: 150px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            border-radius: 4px 0 4px 0;
+            box-shadow: 0px 2px 5px black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container">
+        <div class="text">Hitung Mundur</div>
+        <div id="time">10</div>
+        <button onclick="start()">Mulai</button>
+        <br>
+        <button onclick="berhenti()">Berhenti</button>
+    </div>
+</div>
+    <script>
+        let countDownElement = document.getElementById('time');
+        let detik = 10;
+        let intervalId;
+
+        function start() {
+            function hitungMundur() {
+                detik--;
+                countDownElement.textContent = detik; // Update UI
+                if (detik < 0) {
+                    clearInterval(intervalId); // Hentikan interval ketika detik mencapai -1
+                    countDownElement.textContent = 'Waktu habis!'; // Tampilkan pesan waktu habis
+                }
+            }
+
+            // Hentikan interval yang sedang berjalan jika ada
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+
+            // Panggil fungsi hitungMundur setiap 1000 milidetik (1 detik)
+            intervalId = setInterval(hitungMundur, 700);
+        }
+
+        function berhenti() {
+            clearInterval(intervalId);
+            countDownElement.textContent= 'Waktu habis!'; // Hentikan interval
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            opacity: 0.5;
+        }
+        img {
+            opacity: 0.5;
+        }
+
+        img:hover {
+             opacity: 1.0;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://t4.ftcdn.net/jpg/04/85/03/91/360_F_485039198_jGdwCTZ1PVxZ2phgvxPXBdZ6XjwhWgk0.jpg" alt="gambar1" width="200" height="200" id="gambar"><br>
+    <label for="gambar-select" onchange="myGambar(this)" id="gambar-select">Pilih Gambar</label>
+    <select name="Pilih" id="gambar-select">
+        <option value="">Gambar</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB8P_omfCHYZ3KOqwddi_vt9MByTJRwkU08Q&s">Gambar 1</option>
+        <option value="https://www.denofgeek.com/wp-content/uploads/2021/07/WebStory-The-Patrick-Star-Show-Patrick.jpeg">Gambar 2</option>
+        <option value="https://static.wikia.nocookie.net/spongebobandfriendsadventures/images/e/e5/MrKrabs.gif/revision/latest?cb=20150622214557">Gambar 3</option>
+    </select>
+
+    <select name="Pilih opacity" onchange="myOpacity(this)" id="opacity-select">
+        <option value="">Pilih opacity</option>
+        <option value="">0.1</option>
+        <option value="">0.5</option>
+        <option value="">0.2</option>
+    </select>
+
+    <input type="submit" value="Kirim">
+
+    <script>
+        function myGambar(e) {
+            
+        }
+
+        function myOpacity(e) {
+            
+        }
+    </script>
+</body>
+</html>

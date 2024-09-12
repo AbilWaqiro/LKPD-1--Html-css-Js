@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #udhMeninggal{
+            display: none;
+        }
+        #masihHidup{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <label for="">Kategori Ayah *</label><br><br>
+    <div>
+        <input type="radio" name="keterangan" id="" value="hidup" onclick="showHide(this)"> Masih Hidup
+    </div>
+    <div>
+        <input type="radio" name="keterangan" id="" value="mati" onclick="showHide(this)"> Meninggal
+    </div>
+    <div>
+        <input type="radio" name="keterangan" id="" value="gatau" onclick="showHide(this)">Tidak Diketahui
+    </div><Br></Br>
+
+    <!-- deskripsi ayah -->
+    <div id="masihHidup">
+        <div>
+            <label for="" id="text">Pendidikan ayah *</label><br>
+            <select id="smp" name="smp">
+                <option value="">Pilih</option>
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+        </div>
+        <div>
+            <label for="" id="text">Pekerjaan ayah *</label><br>
+            <select id="smp" name="smp">
+                <option value="">Pilih</option>
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+        </div>
+        <div>
+            <label for="" id="text">Deskripsi Pekerjaan Ayah *</label><br>
+            <select id="smp" name="smp">
+                <option value="">Pilih</option>
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+        </div>
+        <div>
+            <label for="" id="text">total penghasilan *</label><br>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="" id="text">Detail Ayah bekerja *</label><br>
+            <input type="text" name="" id="">
+        </div>
+    </div>
+
+    <div id="udhMeninggal">
+        <div>
+            <label for="" id="text">Pendidikan ayah *</label><br>
+            <select id="smk" name="smk">
+                <option value="">Pilih</option>
+                <option value="10">Kelas 10</option>
+                <option value="11">Kelas 11</option>
+                <option value="12">Kelas 12</option>
+            </select>
+        </div>
+        <div>
+            <label for="" id="text">Pekerjaan ayah *</label><br>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="" id="text">Deskripsi Pekerjaan Ayah *</label><br>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="" id="text">total penghasilan *</label><br>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="" id="text">Detail selama masih hidup *</label><br>
+            <input type="text" name="" id="">
+        </div>
+    </div>
+
+    <!-- jsjsjj -->
+     <script>
+        function showHide(e) {
+            document.getElementById("masihHidup").style.display = "none";
+            document.getElementById("udhMeninggal").style.display = "none";
+
+            if (e.value == "hidup") {
+                document.getElementById("masihHidup").style.display = "block";
+            }
+            else if (e.value == "mati") {
+                document.getElementById("udhMeninggal").style.display = "block";
+            } 
+            else{
+                document.getElementById("masihHidup").style.display = "none";
+                document.getElementById("udhMeninggal").style.display = "none";
+            }
+        }
+        document.getElementById("masihHidup").style.display = "none";
+        document.getElementById("udhMeninggal").style.display = "none";
+     </script>
+</body>
+</html>

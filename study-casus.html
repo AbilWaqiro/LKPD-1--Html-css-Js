@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="pendidikan">Pilih Kategori</label>
+        <div>
+            <label for="pendidikan">Jenjang Pendidikan</label><br>
+            <select name="pendidikan" onchange="changeLabel(this)">
+                <option value="">Pilih</option>
+                <option value="sd">SD</option>
+                <option value="smp">SMP</option>
+                <option value="smk">SMK</option>
+            </select>
+        </div>
+        <div>
+            <label for="kelas-select">Tingkat Sekolah/Perguruan Tinggi</label><br>
+            <div id="kelas">
+                <div>
+                    <select id="sd" name="sd">
+                        <option value="">Pilih</option>
+                        <option value="1">Kelas 1</option>
+                        <option value="2">Kelas 2</option>
+                        <option value="3">Kelas 3</option>
+                        <option value="4">Kelas 4</option>
+                        <option value="5">Kelas 5</option>
+                        <option value="6">Kelas 6</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="smp" name="smp">
+                        <option value="">Pilih</option>
+                        <option value="7">Kelas 7</option>
+                        <option value="8">Kelas 8</option>
+                        <option value="9">Kelas 9</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="smk" name="smk">
+                        <option value="">Pilih</option>
+                        <option value="10">Kelas 10</option>
+                        <option value="11">Kelas 11</option>
+                        <option value="12">Kelas 12</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function changeLabel(e) {
+            document.getElementById("sd").style.display = "none";
+            document.getElementById("smp").style.display = "none";
+            document.getElementById("smk").style.display = "none";
+            
+            if (e.value === "sd") {
+                document.getElementById("sd").style.display = "block";
+            } else if (e.value === "smp") {
+                document.getElementById("smp").style.display = "block";
+            } else if (e.value === "smk") {
+                document.getElementById("smk").style.display = "block";
+            }
+        }
+
+        document.getElementById("sd").style.display = "none";
+        document.getElementById("smp").style.display = "none";
+        document.getElementById("smk").style.display = "none";
+    </script>
+</body>
+</html>

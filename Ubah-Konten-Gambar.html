@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah</title>
+    <style>
+        /* Styling default untuk gambar */
+        #gambar {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-around; align-items:center; border:1px solid black; width:500px; margin:20px auto">
+        <img src="https://t4.ftcdn.net/jpg/04/85/03/91/360_F_485039198_jGdwCTZ1PVxZ2phgvxPXBdZ6XjwhWgk0.jpg" alt="gambar1" width="200" height="200" id="gambar">
+        <form action="" style="display:flex; flex-direction:column">
+            <label for="gambar-select">Pilih Gambar</label>
+            <select name="gambar" id="gambar-select">
+                <option value="">Gambar</option>
+                <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB8P_omfCHYZ3KOqwddi_vt9MByTJRwkU08Q&s">Gambar 1</option>
+                <option value="https://www.denofgeek.com/wp-content/uploads/2021/07/WebStory-The-Patrick-Star-Show-Patrick.jpeg">Gambar 2</option>
+                <option value="https://static.wikia.nocookie.net/spongebobandfriendsadventures/images/e/e5/MrKrabs.gif/revision/latest?cb=20150622214557">Gambar 3</option>
+            </select>
+            <label for="bentuk">Bentuk</label>
+            <select name="bentuk" id="bentuk">
+                <option value="lingkaran">Lingkaran</option>
+                <option value="kotak">Kotak</option>
+                <option value="segitiga">Segitiga</option>
+            </select>
+            <label for="warna">Warna</label>
+            <select name="warna" id="warna">
+                <option value="">PIlih warna</option>
+                <option value="merah">Merah</option>
+                <option value="kuning">Kuning</option>
+                <option value="hijau">Hijau</option>
+            </select>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+<script>
+
+//JavaScript
+const gambar = document.getElementById('gambar');
+const form = document.querySelector('form');
+const gambarSelect = document.getElementById('gambar-select');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const bentuk = document.getElementById('bentuk').value;
+    const warna = document.getElementById('warna').value;
+
+    // Update src gambar
+    gambar.src = gambarSelect.value;
+
+    if (bentuk === "lingkaran") {
+        if (warna === "merah") {
+            gambar.style.border = '5px solid red'; // Menambahkan ukuran border untuk visibilitas dan menambah warna
+            gambar.style.borderRadius = '50%'; // Membuat gambar menjadi lingkaran
+        } else if (warna === "kuning") {
+            gambar.style.border = '5px solid yellow'; 
+            gambar.style.borderRadius = '50%'; 
+        } else if (warna === "hijau") {
+            gambar.style.border = '5px solid green';
+            gambar.style.borderRadius = '50%'; 
+        } else {
+            gambar.style.border = 'none';
+            gambar.style.borderRadius = '50%'; // Menghilangkan border tapi tetap lingkaran
+        }
+    } else if (bentuk === "kotak") {
+        if (warna === "merah") {
+            gambar.style.border = '5px solid red';
+            gambar.style.borderRadius = 'none';// Membuat gambar menjadi kotak
+        } else if (warna === "kuning") {
+            gambar.style.border = '5px solid yellow'; 
+            gambar.style.borderRadius = 'none'; 
+        } else if (warna === "hijau") {
+            gambar.style.border = '5px solid green';
+            gambar.style.borderRadius = 'none'; 
+        } else {
+            gambar.style.border = 'none';
+            gambar.style.borderRadius = 'none';// Menghilangkan border tapi tetap kotak
+        }
+        
+    } else if (bentuk === "segitiga") {
+        if (warna === "merah") {
+            gambar.style.borderRadius = '0';
+            gambar.style.border = '5px solid red';
+            gambar.style.clipPath = 'polygon(50% 0%, 100% 100%, 0% 100%)';
+        } else if (warna === "kuning") {
+            gambar.style.borderRadius = '0';
+            gambar.style.border = '5px solid yellow';
+            gambar.style.clipPath = 'polygon(50% 0%, 100% 100%, 0% 100%)';
+        } else if (warna === "hijau") {
+            gambar.style.borderRadius = '0';
+            gambar.style.border = '5px solid green';
+            gambar.style.clipPath = 'polygon(50% 0%, 100% 100%, 0% 100%)';
+        } else {
+            gambar.style.borderRadius = '0';
+            gambar.style.border = 'none';
+            gambar.style.clipPath = 'polygon(50% 0%, 100% 100%, 0% 100%)';// Menghilangkan border tapi tetap segitiga
+        }
+        
+    } else {
+        gambar.style.borderRadius = '0'; // Menghilangkan efek  
+        gambar.style.border = 'none'; // Menghapus border
+    }
+});
+//end JavaScript
+
+</script>
+</body>
+</html> 
